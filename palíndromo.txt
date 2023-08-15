@@ -1,0 +1,16 @@
+function ehPalindromo(palavra) {
+  
+  const palavraFormatada = palavra.toLowerCase().replace(/\s/g, '');
+
+  // Compara a palavra original com sua versão invertida
+  return palavraFormatada === palavraFormatada.split('').reverse().join('');
+}
+
+const palavra = 'ovo';
+const resultado = ehPalindromo(palavra);
+
+if (resultado) {
+  console.log(`A palavra "${palavra}" é um palíndromo.`);
+} else {
+  console.log(`A palavra "${palavra}" não é um palíndromo.`);
+}
